@@ -56,15 +56,15 @@ class  ProductsRepositoryImpl@Inject constructor(
                 productApi.getProductsList()
             } catch (e: IOException) {
                 e.printStackTrace()
-                emit(DataState.Error(errorMessage = "Error loading products"))
+                emit(DataState.Error(errorMessage = "Error(IO) loading products ${e.message}"))
                 return@flow
             } catch (e: HttpException) {
                 e.printStackTrace()
-                emit(DataState.Error(errorMessage = "Error loading products"))
+                emit(DataState.Error(errorMessage = "Error(Http) loading products ${e.message}"))
                 return@flow
             }  catch (e: Exception) {
                 e.printStackTrace()
-                emit(DataState.Error(errorMessage = "Error loading products"))
+                emit(DataState.Error(errorMessage = "Error loading products ${e.message}"))
                 return@flow
             }
 

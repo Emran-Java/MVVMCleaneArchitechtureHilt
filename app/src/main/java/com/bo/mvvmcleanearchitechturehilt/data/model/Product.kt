@@ -1,4 +1,4 @@
-package com.bo.networkoperationdemo.data.model
+package com.bo.mvvmcleanearchitechturehilt.data.model
 
 data class Product(
     val brand: String,
@@ -7,7 +7,7 @@ data class Product(
     val discountPercentage: Double,
     val id: Int,
     val images: List<String>,
-    val price: Int,
+    val price: Double,
     val rating: Double,
     val stock: Int,
     val thumbnail: String,

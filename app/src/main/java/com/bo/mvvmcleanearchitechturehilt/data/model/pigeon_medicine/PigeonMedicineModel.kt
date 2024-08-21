@@ -1,4 +1,4 @@
-package com.bo.networkoperationdemo.data.model.pigeon_medicine
+package com.bo.mvvmcleanearchitechturehilt.data.model.pigeon_medicine
 
 import android.os.Parcelable
 import com.google.gson.annotations.Expose

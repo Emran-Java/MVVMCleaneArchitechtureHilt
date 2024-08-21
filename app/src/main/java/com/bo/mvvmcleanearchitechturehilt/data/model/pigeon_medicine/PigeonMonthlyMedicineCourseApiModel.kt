@@ -1,6 +1,7 @@
-package com.bo.networkoperationdemo.data.model.pigeon_medicine
+package com.bo.mvvmcleanearchitechturehilt.data.model.pigeon_medicine
 
 import android.os.Parcelable
+import com.bo.mvvmcleanearchitechturehilt.data.model.pigeon_medicine.PigeonMedicineModel
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize

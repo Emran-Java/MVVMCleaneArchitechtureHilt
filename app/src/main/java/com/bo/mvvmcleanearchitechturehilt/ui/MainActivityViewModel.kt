@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bo.mvvmcleanearchitechturehilt.data.model.Products
-import com.bo.networkoperationdemo.data.model.pigeon_medicine.PigeonMonthlyMedicineCourseApiModel
+import com.bo.mvvmcleanearchitechturehilt.data.model.pigeon_medicine.PigeonMonthlyMedicineCourseApiModel
 import com.bo.mvvmcleanearchitechturehilt.network.network_data.DataState
 import com.bo.mvvmcleanearchitechturehilt.data.repo.ProductsRepositoryImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -42,8 +42,7 @@ class MainActivityViewModel @Inject constructor(
         }
     }
 
-    private val _productList2: MutableStateFlow<Products?> =
-        MutableStateFlow(null)
+    private val _productList2: MutableStateFlow<Products?> = MutableStateFlow(null)
     val productList2 = _productList2.asStateFlow()
 
     private val _loaderState: MutableStateFlow<Boolean> =
@@ -82,7 +81,7 @@ class MainActivityViewModel @Inject constructor(
                     }
                 } catch (ex: Exception) {
                     _loaderState.value = false
-                    Log.d("apiCall","ex: ${ex.toString()}")
+                    Log.d("apiCall","ex: ${ex.message}")
                 }
             }
         }
