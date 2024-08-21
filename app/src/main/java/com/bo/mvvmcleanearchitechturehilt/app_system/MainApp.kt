@@ -1,0 +1,12 @@
+package com.bo.mvvmcleanearchitechturehilt.app_system
+
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MainApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+    }
+}
