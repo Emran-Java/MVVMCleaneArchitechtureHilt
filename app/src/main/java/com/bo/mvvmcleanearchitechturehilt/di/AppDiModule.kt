@@ -88,5 +88,21 @@ object AppDiModule {
        return ProductsRepositoryImpl(productApi)
     }
 
+    /* this work for when we remove hilt
+        fun provideProductsRepository(context:Context): ProductsRepositoryImpl {
+       return ProductsRepositoryImpl(provideCommonApiService(provideRetrofit(provideGson(),getHttpClient(context))))
+    }
+
+    call this function from ViewModel
+            val productsRepository = AppDiModule.provideProductsRepository(context)
+
+            then we can use
+            viewModelScope.launch {
+                productsRepository.getProductsList2().collectLatest { result ->
+                //...
+                }
+            }
+
+    * */
 
 }
